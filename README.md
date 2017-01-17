@@ -6,4 +6,4 @@ Local installation:
   * webpack
   * npm start
   
- After installation app will be available at http://localhost:8080/
+After installation app will be available at http://localhost:8080/
