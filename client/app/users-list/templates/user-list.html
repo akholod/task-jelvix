@@ -1,12 +1,12 @@
-<h3>User lists</h3>
-<div  class="user-card" ng-repeat="user in userListCtrl.users" ui-sref="userPosts({id: user.id})">
-    <div class="user-card-header">{{user.name}} nickname: {{user.username}}</div>
-    <div class="user-card-body">
+<h3 class="head-text">User lists</h3>
+<div  class="card" ng-repeat="user in userListCtrl.users" ui-sref="userPosts({id: user.id})">
+    <div class="card-header text-center">{{user.name}} nickname: {{user.username}}</div>
+    <div class="card-body">
         <div class="body-item">
             Email <a ng-href="mailto:{{user.email}}">{{user.email}}</a>
         </div>
         <div class="body-item">
-            Phone {{user.phone}}</a>
+            Phone <a ng-href="tel:{{user.phone}}">{{user.phone}}</a>
         </div>
         <div class="body-item">
             Company {{user.company.name}}</a>

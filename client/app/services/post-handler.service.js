@@ -9,4 +9,13 @@ module.exports = function (Restangular) {
                 console.log(new Error((dataError)));
             });
     };
+
+    this.getPost = function(id) {
+        return Restangular.one('posts', id).get()
+            .then((response) => {
+                return response;
+            }, (dataError) => {
+                console.log(new Error((dataError)));
+            });
+    };
 };

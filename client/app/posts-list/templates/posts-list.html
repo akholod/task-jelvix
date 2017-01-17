@@ -1,9 +1,10 @@
-<h3>Posts lists</h3>
-<div ui-sref="" class="user-card" ng-repeat="post in postsListCtrl.posts">
-    <div class="user-card-header">{{post.title}}</div>
-    <div class="user-card-body">
+<h3 class="head-text">Posts from "{{postsListCtrl.currentUser.name}}" <a ng-href="mailto:{{postsListCtrl.currentUser.email}}">{{postsListCtrl.currentUser.email}}</a></h3>
+<div class="user-card" ng-repeat="post in postsListCtrl.posts" ui-sref="postComments({id: post.id})">
+    <div class="card-header">{{post.title}}</div>
+    <div class="card-body">
         <div class="body-item">
             {{post.body}}
         </div>
     </div>
+
 </div>

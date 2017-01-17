@@ -1,0 +1,10 @@
+<h3 class="head-text">Comments on <span class="text-bolder">{{commentsListCtrl.currentPost.title}}</span></h3>
+<div ng-repeat="comment in commentsListCtrl.comments">
+    <div class="card-header">{{comment.name}}</div>
+    <div class="card-body">
+        <div class="body-item">
+            {{comment.body}}
+        </div>
+    </div>
+
+</div>

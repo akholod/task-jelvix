@@ -9,12 +9,12 @@ module.exports = angular.module('app')
                 template: '<users-list></users-list>'
             })
             .state('userPosts', {
-                url: '/posts/:id/',
+                url: '/posts/:id',
                 template: '<posts-list></posts-list>'
             })
             .state('postComments', {
-                url: '/comments/:id/',
-                template: '<coments-list></coments-list>'
+                url: '/comments/:id',
+                template: '<comments-list></comments-list>'
             });
 
         $urlRouterProvider.otherwise('/users');
