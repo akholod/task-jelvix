@@ -5,4 +5,4 @@ require('./posts-list');
 require('./comments-list');
 
 
-module.exports =  angular.module('app', ['restangular', 'ui.router', 'userList', 'postsList', 'commentsList']);
+module.exports =  angular.module('app', ['restangular', 'ui.router', 'app.usersList', 'app.postsList']);
