@@ -1,6 +1,6 @@
 # Front-end test task for Jelvix
 
-Local instalation: 
+Local installation: 
   * git clone https://github.com/akholod/task-jelvix.git
   * npm install
   * webpack
