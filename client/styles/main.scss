@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa|Raleway');
+@import "variables";
 
-$basicTextColor: #111;
-$basicFontSize: 1.3rem;
+//globals
 body {
   color: $basicTextColor;
   font-family: 'Raleway', sans-serif;
@@ -15,6 +15,7 @@ body {
   }
 }
 
+//cards
 .card {
     margin: 30px 10px;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
@@ -25,7 +26,7 @@ body {
     }
     .card-header {
       font-size: $basicFontSize;
-      background: #6a66f9;
+      background: $basicThemeColor;
       padding: 10px 20px;
     }
     .card-body {
@@ -33,30 +34,46 @@ body {
     }
 }
 
+.post-card {
+  @extend .card;
+  .card-header {
+      background: #895eee;
+  }
+}
+.comment-card {
+  @extend .card;
+  cursor: default;
+  .card-header {
+    background: #b441ee;
+  }
+}
 .container {
   max-width: 960px;
   margin: 0 auto;
 }
+
 
 //helpers
 .text-center {
   text-align: center;
 }
 .text-bolder {
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .head-text {
   @extend .text-center;
   letter-spacing: 0.1rem;
   text-transform: uppercase;
+  font-size: $basicFontSize * 1.8;
   font-family: 'Comfortaa', cursive;
 }
+
 
 .loader {
   margin: calc(50% - 200px) auto;
   border: 25px solid #f3f3f3;
-  border-top: 25px solid #3e3a86;
+  border-top: 25px solid $basicThemeColor;
   border-radius: 50%;
   width: 150px;
   height: 150px;

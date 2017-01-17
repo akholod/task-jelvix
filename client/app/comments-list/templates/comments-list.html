@@ -1,10 +1,13 @@
-<h3 class="head-text">Comments on <span class="text-bolder">{{commentsListCtrl.currentPost.title}}</span></h3>
-<div ng-repeat="comment in commentsListCtrl.comments">
-    <div class="card-header">{{comment.name}}</div>
+<h3 class="head-text">
+    Comments on
+    <span class="text-bolder">{{commentsListCtrl.currentPost.title}}</span>
+</h3>
+<a ng-click="commentsListCtrl.previusState()">Back to user posts</a>
+<div ng-repeat="comment in commentsListCtrl.comments" class="comment-card">
+    <div class="card-header">{{comment.title}}</div>
     <div class="card-body">
         <div class="body-item">
             {{comment.body}}
         </div>
     </div>
-
 </div>
